@@ -20,8 +20,8 @@ if (ifTruthy) {
 }
 
 ////Number Line
-//Create input 2 variables
-//add the 2 variables together then comapare it
+//Create 2 input variables
+//take the sum of the 2 variables then compare it
 //check if the sum is less tahn -1000
 //Check if the sum is less than 0
 //check if the sum is equal to 0
