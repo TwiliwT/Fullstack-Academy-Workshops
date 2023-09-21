@@ -2,20 +2,20 @@
 //Create input value
 //check wether the value is true or false
 //determine what the type of input it is
-let ifTruthy = null;
+let ifTruthy = undefined;
 let ifTruthyType = typeof ifTruthy;
 
 if (ifTruthy) {
   console.log(true);
-} else if (ifTruthyType == "boolean") {
+} else if (ifTruthyType === "boolean") {
   console.log("The boolean value false is falsy");
-} else if (ifTruthyType == "object") {
+} else if (ifTruthyType === "object") {
   console.log("The null value is falsy");
-} else if (ifTruthyType == "undefined") {
+} else if (ifTruthyType === "undefined") {
   console.log("undefined is falsy");
-} else if (ifTruthyType == "number") {
+} else if (ifTruthyType === "number") {
   console.log("The number 0 is falsy (the only falsy number)");
-} else if (ifTruthyType == "string") {
+} else if (ifTruthyType === "string") {
   console.log("The empty string is falsy (the only falsy string)");
 }
 
