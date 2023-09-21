@@ -1,7 +1,23 @@
 ////Is Truthy
 //Create input value
-//Check wether the value is true or false
-console.log(undefined ? "True" : "False");
+//check wether the value is true or false
+//determine what the type of input it is
+let ifTruthy = null;
+let ifTruthyType = typeof ifTruthy;
+
+if (ifTruthy) {
+  console.log(true);
+} else if (ifTruthyType == "boolean") {
+  console.log("The boolean value false is falsy");
+} else if (ifTruthyType == "object") {
+  console.log("The null value is falsy");
+} else if (ifTruthyType == "undefined") {
+  console.log("undefined is falsy");
+} else if (ifTruthyType == "number") {
+  console.log("The number 0 is falsy (the only falsy number)");
+} else if (ifTruthyType == "string") {
+  console.log("The empty string is falsy (the only falsy string)");
+}
 
 ////Number Line
 //Create input 2 variables
