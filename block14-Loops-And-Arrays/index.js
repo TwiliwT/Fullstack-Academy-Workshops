@@ -56,4 +56,20 @@ for (let i = 0; i < toBeReversed.length; i++) {
 
 console.log(reversed);
 
+//// FizzBuzz
+// Create a for loop to divise each number
+// if the number is divisible by 3 and 5 output "FizzBuzz"
+// if the number is divisible by 5 output "Buzz"
+// if the number is divisible by 3 output "Fizz"
 
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else {
+    console.log(i);
+  }
+}
