@@ -1,8 +1,9 @@
 //// Only Odds
-// Create input "numbers" Array
-// Create placeholder "odds" array
-// Create a for loop to sift through every integer in the input array
-// Divise each number 2 if there is any remaining push that integer to the odds aray
+// Create input "numbers" Array.
+// Create placeholder "odds" array.
+// Create a for loop to sift through every integer in the input array.
+// Divise each number 2 if there is any remaining push that integer to the odds aray.
+// Output "odds" array to the console
 
 const numbers = [2, 4, 6, 8, 11, 20, 15, 22];
 let odds = [];
@@ -14,3 +15,29 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(odds);
+
+//// Vowel vs Consonant
+// Create "vowels" array to comapre the word too.
+// Create input "word"
+// Create 2 counters, 1 for consonants, 1 for vowels
+// Compare each letter in the "word" string with the "vowels" array
+// For each vowel increase the vowel counter
+// For each consonants increase consonants counter
+// Then print the result to the console
+
+const vowels = ["a", "e", "i", "o", "u"];
+const word = "hello";
+let consonantsCounter = 0;
+let vowelsCounter = 0;
+
+for (let i = 0; i < word.length; i++) {
+  if (vowels.includes(word[i])) {
+    vowelsCounter++;
+  } else {
+    consonantsCounter++;
+  }
+}
+
+console.log(
+  `${word} has ${consonantsCounter} consonants and ${vowelsCounter} vowels.`
+);
