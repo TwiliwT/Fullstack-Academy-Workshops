@@ -10,10 +10,12 @@ const customer = {
   firstVisit: false,
 };
 
-customer.email = "Jak3Smith1992@email.com";
-customer.phone = 3195551234;
-customer.zipCode = "63132";
-customer.favoriteFlavors = ["coffee", "strawberry", "matcha"];
+console.log(customer);
+
+customer["email"] = "Jak3Smith1992@email.com";
+customer["phone"] = 3195551234;
+customer["zipCode"] = "63132";
+customer["favoriteFlavors"] = ["coffee", "strawberry", "matcha"];
 
 delete customer.zipCode;
 delete customer.favoriteStore;
