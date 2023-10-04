@@ -46,10 +46,23 @@ const drinksBeans = coffeeMenu.filter((drinks) => {
 
 console.log(drinksBeans);
 
-////Alternate Prompt 7
+////Prompt 7
 //This utilizes Promopt 6 variable to do this instead of having to check if it is seasonal again.
+//I'm honostly not sure if this is what it wants me to do.
+const drinksBeans2 = drinksSeasonal.filter(
+  (drinks) => drinks.name + "with imported beans"
+);
+
+console.log(drinksBeans2);
+
+////Alternate Prompt 7
+//This filters through "coffeeMenu" and gets the drinks that are seasonal and adds "with imported beans" in the name property.
+//I'm honostly not sure if this is what it wants me to do.
 //uncomment lines below if you wish to try it.
-// const drinksBeans2 = drinksSeasonal.filter(
-//   (drinks) => drinks.name + "with imported beans"
-// );
-// console.log(drinksBeans2);
+// const drinksBeans = coffeeMenu.filter((drinks) => {
+//   if (drinks.seasonal === true) {
+//     return (drinks.name = `${drinks.name} with imported beans`);
+//   }
+// });
+
+// console.log(drinksBeans);
