@@ -56,15 +56,3 @@ const drinksBeans2 = drinksSeasonal.filter(
 );
 
 console.log(drinksBeans2);
-
-////Alternate Prompt 7
-//This filters through "coffeeMenu" and gets the drinks that are seasonal and adds "with imported beans" in the name property.
-//I'm honostly not sure if this is what it wants me to do.
-//uncomment lines below if you wish to try it.
-// const drinksBeans = coffeeMenu.filter((drinks) => {
-//   if (drinks.seasonal === true) {
-//     return (drinks.name = `${drinks.name} with imported beans`);
-//   }
-// });
-
-// console.log(drinksBeans);
