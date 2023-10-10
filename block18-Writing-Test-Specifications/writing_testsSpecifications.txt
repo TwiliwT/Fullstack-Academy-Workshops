@@ -1,0 +1,28 @@
+Unit Tests:
+1. A function called "multiplication" that returns the product of the two input numbers.
+  
+  Expect the input to be only numbers.
+  Expect there to be only 2 inputs.
+  Expect a non-number in the input to result in a error.
+
+2. A function called "concatOdds" takes two arrays of integers as arguments. 
+It should return a single array that only contains the odd numbers, in ascending order, from both of the arrays.
+
+  Expect there to only be 2 input arrays.
+  Expect there to be only odd and/or even numbers in the array.
+  Expect there to be only odd numbers in the output array.
+  If a number has already been put into the output array it will not put the same number in.
+  If a non-number is in the array it should ignore it and not put it in the output array.
+  If it is a even number it should ignore it and not put it in the output array.
+
+Functional Tests:
+
+1. A shopping cart checkout feature that allows a user to check out as a guest (without an account), or as a logged-in user. 
+They should be allowed to do either, but should be asked if they want to create an account or log in if they check out as a guest.
+
+  The checkout button should grayed out unless there is something in the cart.
+  If the user is a guest it should prompt the user to sign in and expain the various reasons why they should. (it should be optinal.)
+  There should be various input fields to input users data such as Name, city, address, zip code.
+
+
+
