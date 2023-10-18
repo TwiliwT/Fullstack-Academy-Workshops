@@ -21,7 +21,7 @@ class ElectricCar extends Car {
   }
 }
 
-//This object it created from the "ElectricCar" Templet/Class.
+//This object is created from the "ElectricCar" Templet/Class.
 const myCar = new ElectricCar("Tesla", "Model S", 2019, 300);
 
 //This logs the object to the console.
