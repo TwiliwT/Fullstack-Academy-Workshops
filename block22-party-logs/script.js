@@ -64,6 +64,9 @@ const renderSinglePartyById = async (id) => {
     partyContainer.innerHTML = "";
 
     // create new HTML element to display party details
+
+    // I have no clue where it wants me to get the title/event/city/state/country from as they do not exist in the party object.
+    // I also could not figure out where the guests/gifts/rsvps are stored, it always just gave me an empty array whenever i tried to access them.
     const partyDetailsElement = document.createElement("div");
     partyDetailsElement.classList.add("party-details");
     partyDetailsElement.innerHTML = `
