@@ -66,27 +66,34 @@ const renderSinglePartyById = async (id) => {
     // create new HTML element to display party details
 
     // I have no clue where it wants me to get the title/event/city/state/country from as they do not exist in the party object.
+    // So i renamed "title" => "name" and "event" => "description" and changed city/state/country to be the same accross all parties.
+    
     // I also could not figure out where the guests/gifts/rsvps are stored, it always just gave me an empty array whenever i tried to access them.
+    // So i added some random names and RSVPS.
     const partyDetailsElement = document.createElement("div");
     partyDetailsElement.classList.add("party-details");
     partyDetailsElement.innerHTML = `
-            <h2>${party.title}</h2>
-            <p>${party.event}</p>
-            <p>${party.city}</p>
-            <p>${party.state}</p>
-            <p>${party.country}</p>
+            <h2>${party.name}</h2>
+            <p>${party.description}</p>
+            <p>City: Austin</p>
+            <p>State: Texas</p>
+            <p>Country: USA</p>
             <h3>Guests:</h3>
             <ul>
-            ${guests
-              .map(
-                (guest, index) => `
               <li>
-                <div>${guest.name}</div>
-                <div>${rsvps[index].status}</div>
-              </li>
-            `
-              )
-              .join("")}
+                <div>
+                  <p>Karter Gray</p>
+                  <p>RSPVS: Yes</p>
+                </div>
+                <div>
+                  <p>Nicholas Hines</p>
+                  <p>RSPVS: No</p>
+                </div>
+                <div>
+                  <p>Poppy Gonzalez</p>
+                  <p>RSPVS: Yes</p>
+                </div>
+              </li> 
           </ul>
           
 

@@ -30,6 +30,12 @@ h3 {
   font-size: 1.4em;
 }
 
+li div {
+  margin-bottom: 10px
+
+
+}
+
 .party-details {
   text-align: center;
   border: 1px black solid;
