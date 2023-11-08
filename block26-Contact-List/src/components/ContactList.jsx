@@ -4,6 +4,7 @@ import ContactRow from "./ContactRow";
 
 export default function ContactList({ setSelectedContactId }) {
   const [contacts, setContacts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchContacts() {
@@ -13,6 +14,7 @@ export default function ContactList({ setSelectedContactId }) {
         );
         const result = await response.json();
         setContacts(result);
+        setIsLoading(false);
       } catch (error) {
         console.error(error);
       }
@@ -21,28 +23,32 @@ export default function ContactList({ setSelectedContactId }) {
   }, []);
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th colSpan="3">Contact List</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Name</td>
-          <td>Email</td>
-          <td>Phone</td>
-        </tr>
-        {contacts.map((contact) => {
-          return (
-            <ContactRow
-              key={contact.id}
-              contact={contact}
-              setSelectedContactId={setSelectedContactId}
-            />
-          );
-        })}
-      </tbody>
-    </table>
+    <>
+      {!isLoading && (
+        <table>
+          <thead>
+            <tr>
+              <th colSpan="3">Contact List</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Email</td>
+              <td>Phone</td>
+            </tr>
+            {contacts.map((contact) => {
+              return (
+                <ContactRow
+                  key={contact.id}
+                  contact={contact}
+                  setSelectedContactId={setSelectedContactId}
+                />
+              );
+            })}
+          </tbody>
+        </table>
+      )}
+    </>
   );
 }
