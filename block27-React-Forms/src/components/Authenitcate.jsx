@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Authenitcate.css";
 
 export default function Authenitcate({ token }) {
   const [error, setError] = useState(null);
@@ -33,7 +32,7 @@ export default function Authenitcate({ token }) {
   }
 
   return (
-    <div>
+    <div className="authenitcate-container">
       <h2>Authenitcate</h2>
       {successMessage && <p>{successMessage}</p>}
       {error && <p>{error}</p>}
