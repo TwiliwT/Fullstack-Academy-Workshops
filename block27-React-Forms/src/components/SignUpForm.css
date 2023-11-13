@@ -1,0 +1,19 @@
+label,
+input {
+  display: block;
+  margin: auto;
+}
+
+p {
+    margin: 0px
+}
+
+.signup-container {
+  margin-bottom: 100px;
+}
+
+.submit-button {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+}

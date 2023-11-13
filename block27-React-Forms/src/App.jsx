@@ -5,7 +5,6 @@ import Authenitcate from "./components/Authenitcate";
 
 function App() {
   const [token, setToken] = useState(null);
-  
 
   return (
     <>
