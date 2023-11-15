@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  font-size: 2em;
+  border-radius: 0.5em;
+}
+
+.blue-button {
+  background-color: #275db3;
+  color: white;
+}
+
+.red-button {
+  background-color: #b05f6d;
+  color: white;
+}
+
+.yellow-button {
+  background-color: #b8b822;
+  color: white;
+}
+
+.purple-button {
+  background-color: #852285;
+  color: white;
+}
+
+.home-button {
+  background-color: #6b6b6b;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
