@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.puppy-image {
+  width: 200px;
+}
+
+.puppy-container {
+  width: 250px;
+  height: 500px;
+}
