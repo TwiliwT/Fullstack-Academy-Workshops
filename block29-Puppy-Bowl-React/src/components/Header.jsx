@@ -1,16 +1,13 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-
-
-function Header() {
-  const [searchInput, setSearchInput] = useState("");
-
+function Header({ players, setSearchInput, setFilterdPlayers }) {
   function handleChange(e) {
-    e.preventDefault(e)
-    setSearchInput(e.target.value)
-    console.log(searchInput)
+    e.preventDefault(e);
+    setSearchInput(e.target.value);
+    const value = e.target.value;
+    const filtered = players.filter((player) => player.name.includes(value));
+    setFilterdPlayers(filtered);
   }
 
   return (
@@ -26,7 +23,11 @@ function Header() {
         </div>
         <h1>Puppy Bowl!</h1>
         <div className="container-input">
-          <input type="text" placeholder="Search Here" onChange={handleChange}/>
+          <input
+            type="text"
+            placeholder="Search Here"
+            onChange={handleChange}
+          />
         </div>
       </div>
     </>

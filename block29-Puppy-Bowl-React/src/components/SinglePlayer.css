@@ -1,6 +1,8 @@
 .single-puppy-container {
+  margin: 5px;
   width: 400px;
-  height: 800px;
+  border: solid 2px grey;
+  border-radius: 10%;
 }
 
 .single-puppy-img {

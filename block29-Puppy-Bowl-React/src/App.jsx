@@ -7,19 +7,34 @@ import "./App.css";
 import CreatePuppy from "./components/CreatePuppy";
 
 function App() {
+  const [players, setPlayers] = useState([]);
+  const [filterdPlayers, setFilterdPlayers] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
+
   return (
     <>
       <header>
-        <Header />
+        <Header
+          players={players}
+          setSearchInput={setSearchInput}
+          setFilterdPlayers={setFilterdPlayers}
+        />
       </header>
       <main>
         <Routes>
           <Route
             path="/"
-            element={<AllPlayers />}
+            element={
+              <AllPlayers
+                players={players}
+                setPlayers={setPlayers}
+                searchInput={searchInput}
+                filterdPlayers={filterdPlayers}
+              />
+            }
           />
           <Route path="/Details/:id" element={<SinglePlayers />} />
-          <Route path="/CreatePuppy" element={<CreatePuppy />}/>
+          <Route path="/CreatePuppy" element={<CreatePuppy />} />
         </Routes>
       </main>
     </>

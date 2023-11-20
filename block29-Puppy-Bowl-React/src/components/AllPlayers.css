@@ -9,6 +9,9 @@ main {
 }
 
 .puppy-container {
+  margin: 5px;
   width: 250px;
   height: 500px;
+  border: solid 2px grey;
+  border-radius: 10%;
 }

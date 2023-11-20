@@ -1,5 +1,5 @@
-import { postPuppy } from "../API";
 import { useState } from "react";
+import { postPuppy } from "../API";
 import "./CreatePuppy.css";
 
 function CreatePuppy() {
@@ -9,6 +9,7 @@ function CreatePuppy() {
   const [teamId, setTeamId] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -21,9 +22,11 @@ function CreatePuppy() {
       setError("TeamId: Needs to be a number");
     } else if (imageUrl == null) {
       postPuppy(name, breed, status, teamId);
+      setSuccessMessage("Success");
       setError(null);
     } else {
       postPuppy(name, breed, status, teamId, imageUrl);
+      setSuccessMessage("Success");
       setError(null);
     }
 
@@ -36,6 +39,7 @@ function CreatePuppy() {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        {successMessage && <p className="success-text">{successMessage}</p>}
         {error && <p className="error-text">{error}</p>}
         <label>
           <span>Name: </span>
