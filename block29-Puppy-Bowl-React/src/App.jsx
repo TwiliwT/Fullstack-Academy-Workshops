@@ -4,10 +4,9 @@ import AllPlayers from "./components/AllPlayers";
 import SinglePlayers from "./components/SinglePlayers";
 import Header from "./components/Header";
 import "./App.css";
+import CreatePuppy from "./components/CreatePuppy";
 
 function App() {
-  const [selectedPlayerId, setSelectedPlayerId] = useState("");
-
   return (
     <>
       <header>
@@ -17,9 +16,10 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<AllPlayers setSelectedPlayerId={setSelectedPlayerId} />}
+            element={<AllPlayers />}
           />
           <Route path="/Details/:id" element={<SinglePlayers />} />
+          <Route path="/CreatePuppy" element={<CreatePuppy />}/>
         </Routes>
       </main>
     </>

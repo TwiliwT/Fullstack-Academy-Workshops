@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { fetchAllPlayers } from "../API";
+import { deletePlayer } from "../API";
 import "./AllPlayers.css";
 
-function AllPlayers({ setSelectedPlayerId }) {
+function AllPlayers() {
   const [players, setPlayers] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function callFetch() {
@@ -26,16 +29,20 @@ function AllPlayers({ setSelectedPlayerId }) {
             />
             <p>{players.breed}</p>
             <div>
-              <button>Delete</button>
-              <Link key={players.id} to={`/Details/${players.id}`}>
-                <button
-                  onClick={() => {
-                    setSelectedPlayerId(players.id);
-                  }}
-                >
-                  Details
-                </button>
-              </Link>
+              <button
+                onClick={() => {
+                  deletePlayer(players.id);
+                }}
+              >
+                Delete
+              </button>
+              <button
+                onClick={() => {
+                  navigate(`/Details/${players.id}`);
+                }}
+              >
+                Details
+              </button>
             </div>
           </div>
         );
