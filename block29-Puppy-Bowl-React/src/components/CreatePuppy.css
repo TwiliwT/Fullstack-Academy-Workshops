@@ -1,0 +1,14 @@
+form {
+  display: block;
+  height: 700px;
+  margin-top: 50px;
+}
+
+label {
+  display: block;
+  height: 75px;
+}
+
+.submit-button {
+  font-size: 1.5em;
+}

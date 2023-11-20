@@ -1,0 +1,10 @@
+.single-puppy-container {
+  margin: 5px;
+  width: 400px;
+  border: solid 2px grey;
+  border-radius: 10%;
+}
+
+.single-puppy-img {
+  width: 300px;
+}
