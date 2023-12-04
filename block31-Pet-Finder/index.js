@@ -13,6 +13,8 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
+app.use(express.static("public"));
+
 // hello world route
 app.get("/api", (req, res) => {
   res.send("Hello World!");
