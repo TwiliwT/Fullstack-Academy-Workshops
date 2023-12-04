@@ -1,0 +1,16 @@
+main,
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin-left: 100%;
+  margin-right: 100%;
+}
+
+.pet-container {
+  border: black solid 1px;
+  margin: 5px;
+}
