@@ -5,6 +5,7 @@ const REPLACE_ME = "HELP REPLACE ME!!!!";
 
 // GET - /api/video-games - get all video games
 async function getAllVideoGames() {
+  //! The returns all the videos games.
   try {
     const { rows: videoGames } = await client.query(`SELECT * FROM videoGames`);
     return videoGames;
@@ -15,6 +16,7 @@ async function getAllVideoGames() {
 
 // GET - /api/video-games/:id - get a single video game by id
 async function getVideoGameById(id) {
+  //! Filter video games by the requested id then return the video game with the matching id.
   try {
     const {
       rows: [videoGames],
@@ -34,6 +36,7 @@ async function getVideoGameById(id) {
 // POST - /api/video-games - create a new video game
 async function createVideoGame(body) {
   // LOGIC GOES HERE
+  //! Take a body containing atleaset a name, description and price and create a entry and add it to the database.
   try {
     const {
       rows: [videoGames],
@@ -61,6 +64,7 @@ async function createVideoGame(body) {
 // PUT - /api/video-games/:id - update a single video game by id
 async function updateVideoGame(id, fields = {}) {
   // LOGIC GOES HERE
+  //! Filter video games by id then update the key values depending on what is sent in the field.
   const setString = Object.keys(fields)
     .map((key, index) => `"${key}"=$${index + 1}`)
     .join(", ");
@@ -92,6 +96,7 @@ async function updateVideoGame(id, fields = {}) {
 // DELETE - /api/video-games/:id - delete a single video game by id
 async function deleteVideoGame(id) {
   // LOGIC GOES HERE
+  //! filter videos games by id then delete the one with matching id.
   try {
     const {
       rows: [videoGames],

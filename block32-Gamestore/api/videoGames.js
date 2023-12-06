@@ -34,6 +34,7 @@ router.get("/:id", async (req, res, next) => {
 // POST - /api/video-games - create a new video game
 router.post("/", async (req, res, next) => {
   // LOGIC GOES HERE
+  //! Pass along all the data inside the body to the function.
   try {
     const videoGame = await createVideoGame(req.body);
     res.send(videoGame);
@@ -45,6 +46,7 @@ router.post("/", async (req, res, next) => {
 // PUT - /api/video-games/:id - update a single video game by id
 router.put("/:id", async (req, res, next) => {
   // LOGIC GOES HERE
+  //! Filter video games by id then match the keys to the keys inside the data the update only those with the data inside the param.
   try {
     const videoGame = await updateVideoGame(req.params.id, req.body);
     res.send(videoGame);
@@ -56,6 +58,7 @@ router.put("/:id", async (req, res, next) => {
 // DELETE - /api/video-games/:id - delete a single video game by id
 router.delete("/:id", async (req, res, next) => {
   // LOGIC GOES HERE
+  //! Pass the params [id] into the function to delete the video game.
   try {
     const videoGame = await deleteVideoGame(req.params.id);
     res.send(videoGame);
