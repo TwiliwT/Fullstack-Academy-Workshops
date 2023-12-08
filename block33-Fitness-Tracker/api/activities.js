@@ -39,6 +39,16 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+//!! GET /api/activites/:activityid
+router.get("/:id", async (req, res, next) => {
+  try {
+    const activitie = await getActivityById(req.params.id);
+    res.send(activitie);
+  } catch (error) {
+    next(error);
+  }
+});
+
 // POST /api/activities
 router.post(
   "/",
