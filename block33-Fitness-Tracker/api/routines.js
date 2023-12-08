@@ -33,18 +33,20 @@ router.get("/:id", async (req, res, next) => {
 });
 
 // POST /api/routines
+//!! Added isPublic, i'm not sure if this is what is wanted.
+
 router.post(
   "/",
   requireUser,
   requiredNotSent({ requiredParams: ["name", "goal"] }),
   async (req, res, next) => {
     try {
-      const { name, goal } = req.body;
+      const { isPublic, name, goal } = req.body;
       const createdRoutine = await createRoutine({
         creatorId: req.user.id,
+        isPublic,
         name,
         goal,
-        isPublic: req.body.isPublic,
       });
       if (createdRoutine) {
         res.send(createdRoutine);
